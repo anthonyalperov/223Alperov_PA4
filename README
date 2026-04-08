@@ -1,0 +1,26 @@
+BUILD INSTRUCTIONS
+To compile the program use the Makefile:
+
+--> make main
+
+then
+
+--> ./main
+
+DESIGN DECISIONS
+I made vector<City> container to have the data there. I used vector because it was what I was most comfortable with. It as simple sorting things and not a challenge to implement. The data that was missing example population I was doing it to = 0, as well as latitude I = to 0. I did this since it was reccomended based off the instructions given in PA4. Other than that I pretty much followed the implementation guide given though i used some references from my previous code and used GeeksForGeeks as well for reference.
+
+TESTING
+Testing was done using assert statements in a separate test file. The tests included checking sorting on empty vectors, single-element vectors, and small lists of numbers. I also tested both insertion sort and merge sort to make sure they produced the correct order. Additional tests were done using City objects to confirm sorting worked with different fields like city name and population. All tests ran without errors.
+
+Field   Insertion Sort (ms)  Merge Sort (ms)
+population  ~180 ms     ~175 ms
+city        ~190 ms     ~80 ms
+country     ~185 ms     ~85 ms
+latitude    ~170 ms     ~90 ms
+
+
+
+REFLECTION
+Merge sort was generally faster than insertion sort, especially when working with larger amounts of data. This makes sense because merge sort has better time complexity. Insertion sort still worked correctly but took longer. The field being sorted did not change the results much, but sorting strings seemed slightly slower than numbers. Overall, the results matched what I expected, and there were no major surprises.
+
